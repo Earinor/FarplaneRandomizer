@@ -102,7 +102,7 @@ namespace Farplane.FFX2
 
                         foreach (var node in GarmentGridNodes.GarmentGridNodesList)
                         {
-                            garmentGrids[node.GGOffset + node.NodePosition] = BitConverter.GetBytes(dressphereMap[random.Next(1, 16)].DS_ID)[0];
+                            garmentGrids[node.GGOffset + node.NodePosition] = BitConverter.GetBytes(dressphereMap[random.Next(0, 16)].DS_ID)[0];
                         }
 
                         LegacyMemoryReader.WriteBytes(_garmentGridOffset, garmentGrids);
